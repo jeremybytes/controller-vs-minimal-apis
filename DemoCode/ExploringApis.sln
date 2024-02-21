@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalApi", "MinimalApi\Mi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControllerApi", "ControllerApi\ControllerApi.csproj", "{A421E8A2-0EDC-4824-BDF8-4C4D94912760}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Library", "People.Library\People.Library.csproj", "{7B751CBE-6F3F-4B22-B072-8B0E6AB497CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "People.Library", "People.Library\People.Library.csproj", "{7B751CBE-6F3F-4B22-B072-8B0E6AB497CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTester", "ServiceTester\ServiceTester.csproj", "{7D813070-E678-4503-ACA3-2829A8D6FB2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceTester", "ServiceTester\ServiceTester.csproj", "{7D813070-E678-4503-ACA3-2829A8D6FB2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiTests", "ApiTests\ApiTests.csproj", "{BB4776A3-521F-4C31-8896-F6B6F9E12A32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7D813070-E678-4503-ACA3-2829A8D6FB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D813070-E678-4503-ACA3-2829A8D6FB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D813070-E678-4503-ACA3-2829A8D6FB2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB4776A3-521F-4C31-8896-F6B6F9E12A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB4776A3-521F-4C31-8896-F6B6F9E12A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB4776A3-521F-4C31-8896-F6B6F9E12A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB4776A3-521F-4C31-8896-F6B6F9E12A32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

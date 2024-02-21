@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Set JSON indentation
 // Does not do anything for controller APIs
 builder.Services.ConfigureHttpJsonOptions(options => options.SerializerOptions.WriteIndented = true);
 

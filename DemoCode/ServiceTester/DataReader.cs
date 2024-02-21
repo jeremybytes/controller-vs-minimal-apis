@@ -13,19 +13,9 @@ public class DataReader
         client.BaseAddress = new Uri(baseAddress);
     }
 
-    public async Task<ReaderResponse> GetPeople()
+    public async Task<ReaderResponse> SendRequest(string endpoint)
     {
-        HttpResponseMessage response = await client.GetAsync("people");
-        if (!response.IsSuccessStatusCode)
-        {
-            throw new HttpRequestException($"Unable to process request. Status Code: {response.StatusCode}");
-        }
-        return new(await response.Content.ReadAsStringAsync(), response.StatusCode);
-    }
-
-    public async Task<ReaderResponse> GetPerson(int id)
-    {
-        HttpResponseMessage response = await client.GetAsync($"people/{id}");
+        HttpResponseMessage response = await client.GetAsync(endpoint);
         if (!response.IsSuccessStatusCode)
         {
             throw new HttpRequestException($"Unable to process request. Status Code: {response.StatusCode}");
