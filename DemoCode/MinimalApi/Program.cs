@@ -11,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Set JSON indentation
-builder.Services.ConfigureHttpJsonOptions(options => options.SerializerOptions.WriteIndented = true);
+//builder.Services.ConfigureHttpJsonOptions(options => options.SerializerOptions.WriteIndented = true);
 
 var app = builder.Build();
 
@@ -27,7 +27,7 @@ app.MapGet("/people",
     .WithName("GetPeople")
     .WithOpenApi();
 
-app.MapGet("/people/v1/{id}",
+app.MapGet("/people/{id}",
     async (int id, IPeopleProvider provider) => await provider.GetPerson(id))
     .WithName("GetPersonV1")
     .WithOpenApi();
