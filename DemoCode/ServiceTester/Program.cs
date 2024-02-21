@@ -4,10 +4,10 @@ internal class Program
 {
     static async Task Main(string[] args)
     {
-        Uri controllerUri = new("http://localhost:5062");
-        Uri minimalUri = new("http://localhost:5194");
-
         Console.Clear();
+
+        Uri minimalUri = new("http://localhost:5194");
+        Uri controllerUri = new("http://localhost:5062");
 
         // Minimal API Call
         Console.WriteLine("Minimal /people/3");

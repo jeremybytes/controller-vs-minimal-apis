@@ -12,6 +12,5 @@ public static class RawResponseString
             throw new HttpRequestException($"Unable to process request. Status Code: {response.StatusCode}");
         }
         return await response.Content.ReadAsStringAsync();
-
     }
 }
