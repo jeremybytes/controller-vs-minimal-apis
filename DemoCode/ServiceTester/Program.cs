@@ -16,7 +16,7 @@ internal class Program
 
         Console.WriteLine("----------");
 
-        //// Controller API Call
+        // Controller API Call
         Console.WriteLine("Controller /people/3");
         response = await controllerUri.GetResponse("/people/3");
         Console.WriteLine(response);
@@ -25,27 +25,23 @@ internal class Program
 
         // Calls item that does not exist
 
-        //DataReader controllerReader = new("http://localhost:5062");
-        //DataReader minimalReader = new("http://localhost:5194");
+        Console.WriteLine("Controller /people/-1");
+        var statusResponse = await controllerUri.GetStatusAndResponse("/people/-1");
+        Console.WriteLine($"{(int)statusResponse.Status} {statusResponse.Status}");
+        Console.WriteLine(statusResponse.Data);
 
-        //Console.WriteLine("Controller /people/-1");
-        //response = await controllerReader.SendRequest("/people/-1");
-        //Console.WriteLine(response.status);
-        //Console.WriteLine(response.data);
+        Console.WriteLine("----------");
 
-        //Console.WriteLine("----------");
+        Console.WriteLine("Minimal /people/-1");
+        statusResponse = await minimalUri.GetStatusAndResponse("/people/-1");
+        Console.WriteLine($"{(int)statusResponse.Status} {statusResponse.Status}");
+        Console.WriteLine(statusResponse.Data);
 
-        //Console.WriteLine("Minimal /people/v1/-1");
-        //response = await minimalReader.SendRequest("/people/v1/-1");
-        //Console.WriteLine(response.status);
-        //Console.WriteLine(response.data);
+        Console.WriteLine("----------");
 
-        //Console.WriteLine("----------");
-
-        //Console.WriteLine("Minimal /people/v2/-1");
-        //response = await minimalReader.SendRequest("/people/v2/-1");
-        //Console.WriteLine(response.status);
-        //Console.WriteLine(response.data);
-
+        Console.WriteLine("Minimal /people/v2/-1");
+        statusResponse = await minimalUri.GetStatusAndResponse("/people/v2/-1");
+        Console.WriteLine($"{(int)statusResponse.Status} {statusResponse.Status}");
+        Console.WriteLine(statusResponse.Data);
     }
 }

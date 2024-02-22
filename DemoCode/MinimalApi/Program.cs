@@ -11,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Set JSON indentation
-//builder.Services.ConfigureHttpJsonOptions(options => options.SerializerOptions.WriteIndented = true);
+builder.Services.ConfigureHttpJsonOptions(options => options.SerializerOptions.WriteIndented = true);
 
 var app = builder.Build();
 
